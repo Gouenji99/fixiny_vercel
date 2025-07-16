@@ -54,7 +54,7 @@ const CarDetail = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`/api/chef-park/my-cars/${carId}`, { 
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/${carId}`, { 
         credentials: 'include',
         headers: {'Content-Type': 'application/json'}
       });
@@ -64,7 +64,7 @@ const CarDetail = () => {
       const data = await res.json();
 
       // Plan maintenance if needed
-      const planRes = await fetch('/api/chef-park/my-maintenances/plan', {
+      const planRes = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/plan', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         credentials: 'include',
@@ -157,14 +157,14 @@ const CarDetail = () => {
     
       if (editingMaintenanceId) {
         // This is a completion of an existing maintenance
-        response = await fetch(`/api/chef-park/my-maintenances/upcoming/complete/${editingMaintenanceId}`, {
+        response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/upcoming/complete/${editingMaintenanceId}`, {
           method: 'PUT',
           credentials: 'include',
           body: formData
         });
       } else {
         // This is adding a new maintenance
-        response = await fetch('/api/chef-park/my-maintenances/add', {
+        response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/add', {
           method: 'POST',
           credentials: 'include',
           body: formData
@@ -186,7 +186,7 @@ const CarDetail = () => {
         : [updatedMaintenance, ...(carData?.maintenances || [])];
         
       // Then plan new maintenances based on the updated mileage
-      const planResponse = await fetch('/api/chef-park/my-maintenances/plan', {
+      const planResponse = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/plan', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         credentials: 'include',
@@ -230,7 +230,7 @@ const CarDetail = () => {
   const handleAddMileage = async () => {
     setError('');
     try {
-      const response = await fetch('/api/chef-park/my-mileages/add', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-mileages/add', {
         method: 'POST',
         headers: {'Content-Type': 'application/json',},
         credentials: 'include',
@@ -248,7 +248,7 @@ const CarDetail = () => {
 
       const newMileage = await response.json();
 
-      const planResponse = await fetch('/api/chef-park/my-maintenances/plan', {
+      const planResponse = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/plan', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
         credentials: 'include',
