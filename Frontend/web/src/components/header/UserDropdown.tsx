@@ -19,7 +19,7 @@ export default function UserDropdown() {
 
   const handleSignOut = async () => {
     try {
-      await fetch('/api/auth/logout', {
+      await fetch('https://fixiny-render-xbc3.onrender.com/api/auth/logout', {
         method: 'POST',
         credentials: 'include', // Important for cookie-based auth
       });
@@ -39,7 +39,7 @@ export default function UserDropdown() {
     useEffect(() => {
       const fetchProfile = async () => {
         try {
-          const response = await fetch('/api/user/get-profile', {
+          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/get-profile', {
             credentials: 'include'
           });
           const data = await response.json();
@@ -73,7 +73,7 @@ export default function UserDropdown() {
       >
         <span className="mr-3 overflow-hidden rounded-full h-11 w-11">
           <img 
-            src={profile.photo ? `http://localhost:3001${profileImage}` : '/images/user/owner.png'}
+            src={profile.photo ? `https://fixiny-render-xbc3.onrender.com${profileImage}` : '/images/user/owner.png'}
             onError={(e) => {
               e.currentTarget.src = '/images/user/owner.png';
             }}
