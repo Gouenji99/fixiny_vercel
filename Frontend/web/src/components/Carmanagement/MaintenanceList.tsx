@@ -15,7 +15,7 @@ export default function MaintenanceList () {
 
     const fetchMaintenances = async () => {
         try {
-          const response = await fetch('/api/admin/users/cars/maintenances', {
+          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/users/cars/maintenances', {
             credentials: 'include'
           });
           
