@@ -8,7 +8,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: https://fixiny-render-xbc3.onrender.com
+        target: 'https://fixiny-render-xbc3.onrender.com'
       },
     },
   },
