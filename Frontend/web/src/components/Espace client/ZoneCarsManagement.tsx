@@ -372,7 +372,7 @@ const ZoneCarManagement = () => {
               value={newCar.vin_number}
               onChange={(e) => {
                 const value = e.target.value.toUpperCase();
-                if (/^[A-HJ-NPR-Z0-9]{17}$/.test(value)) {
+                if (/^[A-HJ-NPR-Z0-9]{0,17}$/.test(value)) {
                   setNewCar({...newCar, vin_number: value})}
                 }                
               }
