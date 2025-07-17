@@ -42,7 +42,7 @@ const ZoneCarManagement = () => {
           method: 'GET',
           headers: {'Content-Type': 'application/json',},
           credentials: 'include'
-        }) : await fetch('/api/chef-park/my-cars', {
+        }) : await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars', {
           method: 'GET',
           headers: {'Content-Type': 'application/json',},
           credentials: 'include'
@@ -67,7 +67,7 @@ const ZoneCarManagement = () => {
 
   const fetchZones = async () => {
     try {
-      const res = await fetch('/api/chef-park/my-zones', { credentials: 'include' });
+      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-zones', { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch zones');
       const data = await res.json();
       setZones(data);
@@ -85,7 +85,7 @@ const ZoneCarManagement = () => {
     setIsCreating(true);
     setError('');
     try {
-      const res = await fetch('/api/chef-park/my-cars/add', {
+      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

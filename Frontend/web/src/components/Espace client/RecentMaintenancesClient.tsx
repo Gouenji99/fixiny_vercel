@@ -20,7 +20,7 @@ export default function RecentMaintenancesClient() {
   useEffect(() => {
     const fetchMaintenances = async () => {
       try {
-        const response = await fetch('/api/chef-park/my-maintenances/recent-maintenances', {
+        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/recent-maintenances', {
           credentials: 'include'
         });
         const data = await response.json();

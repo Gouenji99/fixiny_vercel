@@ -10,7 +10,7 @@ export default function ZoneMetricsClient() {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        const response = await fetch('/api/chef-park/my-zones/zone-metrics', {
+        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-zones/zone-metrics', {
           credentials: 'include'
         });
         const data = await response.json();

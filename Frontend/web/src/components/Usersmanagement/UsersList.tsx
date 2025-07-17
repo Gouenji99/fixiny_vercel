@@ -13,7 +13,7 @@ export default function UsersList() {
 
   const fetchUsers = async () => {
     try {
-      const response = await fetch('/api/admin/users', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/users', {
         credentials: 'include'
       });
       

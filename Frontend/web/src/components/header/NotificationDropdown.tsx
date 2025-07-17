@@ -12,7 +12,7 @@ export default function NotificationDropdown() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch('/api/user/notifications', { credentials: 'include' });
+      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/notifications', { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch notifications');
       const data = await res.json();
       setNotifications(data);
@@ -53,7 +53,7 @@ export default function NotificationDropdown() {
 
   const markAllAsRead = async () => {
     try {
-      await fetch('/api/user/notifications/read-all', {
+      await fetch('https://fixiny-render-xbc3.onrender.com/api/user/notifications/read-all', {
         method: 'PATCH',
         credentials: 'include'
       });

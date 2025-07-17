@@ -20,7 +20,7 @@ const ZonesManagement = () => {
 
   const fetchZones = async () => {
     try {
-      const response = await fetch('/api/chef-park/my-zones', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-zones', {
         credentials: 'include'
       });
       if (!response.ok) throw new Error('Failed to fetch zones');
@@ -38,7 +38,7 @@ const ZonesManagement = () => {
         setError('Zone name is required');
         return;
       }
-      const response = await fetch('/api/chef-park/zones/add', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/zones/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

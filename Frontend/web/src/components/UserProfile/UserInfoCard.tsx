@@ -21,7 +21,7 @@ export default function UserInfoCard() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('/api/user/get-profile', {
+        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/get-profile', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -41,7 +41,7 @@ export default function UserInfoCard() {
   const handleSave = async () => {
     setIsLoading(true);
     try {
-      const response = await fetch('/api/user/update-profile', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/update-profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

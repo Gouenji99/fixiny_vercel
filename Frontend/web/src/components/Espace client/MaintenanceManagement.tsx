@@ -63,7 +63,7 @@ const MaintenanceManagement = () => {
   const handleCreateMaintenance = async () => {
     setError('');
     try {
-      const res = await fetch('/api/chef-park/my-maintenances/add', {
+      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

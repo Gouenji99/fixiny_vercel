@@ -53,7 +53,7 @@ const TunisiaMap: React.FC<TunisiaMapProps> = ({
   useEffect(() => {
     const fetchData = async (): Promise<void> => {
       try {
-        const response = await fetch('data/TN-gouvernorats.geojson');
+        const response = await fetch('https://fixiny-render-xbc3.onrender.comdata/TN-gouvernorats.geojson');
         if (!response.ok) {
           throw new Error('Failed to fetch data');
         }

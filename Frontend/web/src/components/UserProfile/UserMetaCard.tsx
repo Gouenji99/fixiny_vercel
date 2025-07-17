@@ -19,7 +19,7 @@ export default function UserMetaCard() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await fetch('/api/user/get-profile', {
+        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/get-profile', {
           credentials: 'include'
         });
         const data = await response.json();
@@ -63,7 +63,7 @@ export default function UserMetaCard() {
       const formData = new FormData();
       formData.append('photo', file);
 
-      const response = await fetch('/api/user/update-profile/photo', {
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/update-profile/photo', {
         method: 'POST',
         credentials: 'include',
         body: formData

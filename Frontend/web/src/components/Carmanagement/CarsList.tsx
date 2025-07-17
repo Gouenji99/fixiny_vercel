@@ -13,7 +13,7 @@ export default function CarsList () {
 
     const fetchCars = async () => {
         try {
-          const response = await fetch('/api/admin/users/cars', {
+          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/users/cars', {
             credentials: 'include'
           });
           

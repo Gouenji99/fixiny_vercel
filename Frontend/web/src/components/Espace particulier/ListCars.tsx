@@ -57,7 +57,7 @@ export default function ListCars() {
 
   const fetchCars = async () => {
     try {
-      const response = await fetch('/api/particulier/my-cars');
+      const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/particulier/my-cars');
       const data = await response.json();
       setCars(data);
     } catch (error) {
