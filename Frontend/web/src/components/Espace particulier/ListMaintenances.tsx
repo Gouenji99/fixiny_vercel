@@ -80,8 +80,8 @@ export default function ListMaintenances() {
     if (!currentMaintenance) return;
 
     const url = currentMaintenance.id 
-      ? `/api/particulier/my-maintenances/update/${currentMaintenance.id}`
-      : '/api/particulier/my-maintenances/create-maintenance';
+      ? `https://fixiny-render-xbc3.onrender.com/api/particulier/my-maintenances/update/${currentMaintenance.id}`
+      : 'https://fixiny-render-xbc3.onrender.com/api/particulier/my-maintenances/create-maintenance';
     const method = currentMaintenance.id ? 'PUT' : 'POST';
 
     try {

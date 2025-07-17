@@ -27,8 +27,8 @@ const MaintenanceManagement = () => {
     setError('');
     try {
       const url = carId 
-        ? `/api/chef-park/my-maintenances/history/${carId}` 
-        : '/api/chef-park/my-maintenances';
+        ? `https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/history/${carId}` 
+        : 'https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances';
       const res = await fetch(url, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch maintenances');
       const data = await res.json();

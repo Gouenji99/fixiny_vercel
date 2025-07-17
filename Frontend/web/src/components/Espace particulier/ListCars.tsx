@@ -89,8 +89,8 @@ export default function ListCars() {
     if (!currentCar || !validateFields()) return;
 
     const url = currentCar.id 
-      ? `/api/particulier/my-cars/update-car/${currentCar.id}`
-      : '/api/particulier/my-cars/create-car';
+      ? `https://fixiny-render-xbc3.onrender.com/api/particulier/my-cars/update-car/${currentCar.id}`
+      : 'https://fixiny-render-xbc3.onrender.com/api/particulier/my-cars/create-car';
     const method = currentCar.id ? 'PUT' : 'POST';
 
     try {
