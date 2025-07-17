@@ -16,7 +16,9 @@ export default function MonthlyTarget() {
     const fetchBudgetData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/target/target-achievement');
+        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/target/target-achievement', {
+           credentials: 'include'
+         });
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

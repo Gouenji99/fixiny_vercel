@@ -11,7 +11,9 @@ export default function MaintenanceStatisticsChart() {
       const fetchMonthlyData = async () => {
         try {
           setLoading(true);
-          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/maintenances/monthly-maintenance');
+          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/maintenances/monthly-maintenance',{
+           credentials: 'include'
+         });
           
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
