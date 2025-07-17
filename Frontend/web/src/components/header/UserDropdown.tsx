@@ -19,7 +19,7 @@ export default function UserDropdown() {
 
   const handleSignOut = async () => {
     try {
-      await fetch('https://fixiny-render-xbc3.onrender.com/api/auth/logout', {
+      await fetch('/api/auth/logout', {
         method: 'POST',
         credentials: 'include', // Important for cookie-based auth
       });
@@ -39,7 +39,7 @@ export default function UserDropdown() {
     useEffect(() => {
       const fetchProfile = async () => {
         try {
-          const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/user/get-profile', {
+          const response = await fetch('/api/user/get-profile', {
             credentials: 'include'
           });
           const data = await response.json();

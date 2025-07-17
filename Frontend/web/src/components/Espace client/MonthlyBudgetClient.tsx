@@ -17,7 +17,7 @@ export default function MonthlyBudgetClient() {
     const fetchBudgetData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/budget/budget-utilization');
+        const response = await fetch('/api/chef-park/budget/budget-utilization');
         
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

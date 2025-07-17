@@ -17,7 +17,7 @@ export default function MonthlyMaintenanceChartClient() {
   useEffect(() => {
     const fetchMonthlyData = async () => {
       try {
-        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/monthly-maintenance', {
+        const response = await fetch('/api/chef-park/my-maintenances/monthly-maintenance', {
           credentials: 'include'
         });
 

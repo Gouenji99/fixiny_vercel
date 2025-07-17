@@ -27,8 +27,8 @@ const MaintenanceManagement = () => {
     setError('');
     try {
       const url = carId 
-        ? `https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/history/${carId}` 
-        : 'https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances';
+        ? `/api/chef-park/my-maintenances/history/${carId}` 
+        : '/api/chef-park/my-maintenances';
       const res = await fetch(url, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch maintenances');
       const data = await res.json();
@@ -44,7 +44,7 @@ const MaintenanceManagement = () => {
     if (!carId) return;
     setLoading(true);
     try {
-      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/${carId}`, { credentials: 'include' });
+      const res = await fetch(`/api/chef-park/my-cars/${carId}`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch car details');
       const data = await res.json();
       setCar(data);
@@ -63,7 +63,7 @@ const MaintenanceManagement = () => {
   const handleCreateMaintenance = async () => {
     setError('');
     try {
-      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/add', {
+      const res = await fetch('/api/chef-park/my-maintenances/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

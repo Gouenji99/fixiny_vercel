@@ -9,7 +9,7 @@ export default function ZoneMetrics() {
   useEffect(() => {
     const fetchMetrics = async () => {
       try {
-        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/zones/zone-metrics', {
+        const response = await fetch('/api/admin/zones/zone-metrics', {
           credentials: 'include'
         });
         const data = await response.json();

@@ -22,7 +22,7 @@ export default function MaintenanceMap() {
     const fetchData = async () => {
       try {
         setLoading(true);
-        const response = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/zones/maintenance-map-data', {
+        const response = await fetch('/api/admin/zones/maintenance-map-data', {
           credentials: 'include',
         });
         if (!response.ok) throw new Error('Failed to fetch zones');

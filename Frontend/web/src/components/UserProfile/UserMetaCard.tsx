@@ -95,7 +95,7 @@ export default function UserMetaCard() {
           <div className="flex flex-col items-center w-full gap-6 xl:flex-row">
             <div className="relative w-20 h-20 overflow-hidden border border-gray-200 rounded-full dark:border-gray-800">
               <img 
-                src={previewImage || `http://localhost:3001${profileImage}`}
+                src={previewImage || `https://fixiny-render-xbc3.onrender.com${profileImage}`}
                 onError={(e) => {
                   e.currentTarget.src = '/images/user/owner.png'; // Fallback
                 }}

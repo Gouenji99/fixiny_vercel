@@ -34,7 +34,7 @@ const TargetManagement = () => {
     const handleUpdateBudget = async () => {
       setError('');
       try {
-        const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/targets/update-target/${editingTarget?.id}`, {
+        const res = await fetch(`/api/admin/targets/update-target/${editingTarget?.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',
@@ -74,7 +74,7 @@ const TargetManagement = () => {
      const fetchTarget = async () => {
       try {
         setLoading(true);
-        const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/targets', { credentials: 'include' });
+        const res = await fetch('/api/admin/targets', { credentials: 'include' });
         if (!res.ok) throw new Error('Failed to fetch Target');
         setTarget(await res.json());
       } catch (err) {
@@ -91,7 +91,7 @@ const TargetManagement = () => {
     const handleCreateBudget = async () => {
       setError('');
       try {
-        const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/admin/targets/create-target', {  // Updated endpoint
+        const res = await fetch('/api/admin/targets/create-target', {  // Updated endpoint
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',

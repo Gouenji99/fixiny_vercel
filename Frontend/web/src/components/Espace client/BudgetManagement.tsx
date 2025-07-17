@@ -37,7 +37,7 @@ const BudgetManagement = () => {
   const handleUpdateBudget = async () => {
     setError('');
     try {
-      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/budget/update/${editingBudget?.id}`, {
+      const res = await fetch(`/api/chef-park/budget/update/${editingBudget?.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -72,8 +72,8 @@ const BudgetManagement = () => {
         
         // Fetch budgets and zones in parallel
         const [budgetsRes, zonesRes] = await Promise.all([
-          fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/budget', { credentials: 'include' }),
-          fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/my-zones', { credentials: 'include' })
+          fetch('/api/chef-park/budget', { credentials: 'include' }),
+          fetch('/api/chef-park/my-zones', { credentials: 'include' })
         ]);
 
         if (!budgetsRes.ok || !zonesRes.ok) {
@@ -111,7 +111,7 @@ const BudgetManagement = () => {
   const handleCreateBudget = async () => {
     setError('');
     try {
-      const res = await fetch('https://fixiny-render-xbc3.onrender.com/api/chef-park/budget/add', {
+      const res = await fetch('/api/chef-park/budget/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
