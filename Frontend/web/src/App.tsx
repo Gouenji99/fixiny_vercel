@@ -47,7 +47,7 @@ export default function App() {
             <Route index path="/" element={<PrivateRoute requiredRole="ADMIN"><Home/></PrivateRoute>}/>
             <Route path="/profit" element={<PrivateRoute requiredRole="ADMIN"><TargetManagement/></PrivateRoute>}/>
 
-            <Route path="/chef-park" element={<PrivateRoute requiredRole="CHEF_PARK"><HomeUser/></PrivateRoute>}/>
+            <Route index path="/chef-park" element={<PrivateRoute requiredRole="CHEF_PARK"><HomeUser/></PrivateRoute>}/>
             <Route path="/chef-park/zones" element={<PrivateRoute requiredRole="CHEF_PARK"><ZonesManagement /></PrivateRoute>} />
             <Route path="/chef-park/zones/:zoneId" element={<PrivateRoute requiredRole="CHEF_PARK"><ZoneDetail /></PrivateRoute>} />
             <Route path="/chef-park/zones/:zoneId/cars" element={<PrivateRoute requiredRole="CHEF_PARK"><ZoneCarManagement /></PrivateRoute>} />
@@ -61,7 +61,7 @@ export default function App() {
             <Route path="/all-cars" element={<PrivateRoute requiredRole="ADMIN"><CarsList/></PrivateRoute>}/>
             <Route path="/all-maintenances" element={<PrivateRoute requiredRole="ADMIN"><MaintenanceList/></PrivateRoute>}/>
 
-            <Route path="/particulier" element={<PrivateRoute requiredRole="PARTICULIER"><HomeParticulier/></PrivateRoute>}/>
+            <Route index path="/particulier" element={<PrivateRoute requiredRole="PARTICULIER"><HomeParticulier/></PrivateRoute>}/>
             <Route path="/particulier/my-cars" element={<PrivateRoute requiredRole="PARTICULIER"><ListCars/></PrivateRoute>}/>
             <Route path="/particulier/my-maintenances" element={<PrivateRoute requiredRole="PARTICULIER"><ListMaintenances/></PrivateRoute>}/>
 
