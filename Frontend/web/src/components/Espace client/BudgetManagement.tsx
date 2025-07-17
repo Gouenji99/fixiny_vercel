@@ -37,7 +37,7 @@ const BudgetManagement = () => {
   const handleUpdateBudget = async () => {
     setError('');
     try {
-      const res = await fetch(`/api/chef-park/budget/update/${editingBudget?.id}`, {
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/budget/update/${editingBudget?.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

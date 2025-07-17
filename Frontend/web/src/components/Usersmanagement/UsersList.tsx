@@ -38,7 +38,7 @@ export default function UsersList() {
 
   const handleApprove = async (userId: string, shouldApprove: boolean) => {
     try {
-      const response = await fetch(`/api/admin/users/${userId}/approve`, {
+      const response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/users/${userId}/approve`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ status: shouldApprove }),
@@ -65,7 +65,7 @@ export default function UsersList() {
     if (!confirm('Are you sure you want to delete this user?')) return;
     
     try {
-      const response = await fetch(`/api/admin/users/${userId}`, {
+      const response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/users/${userId}`, {
         method: 'DELETE',
         credentials: 'include'
       });

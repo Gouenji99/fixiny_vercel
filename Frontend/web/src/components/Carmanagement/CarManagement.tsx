@@ -18,7 +18,7 @@ export default function CarManagement() {
     
     const fetchCars = async () => {
       try {
-        const response = await fetch(`/api/admin/users/${userId}/cars`);
+        const response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/users/${userId}/cars`);
         const data = await response.json();
         setCars(data);
       } catch (error) {
@@ -33,7 +33,7 @@ export default function CarManagement() {
 
   const fetchMaintenances = async (carId: string) => {
     try {
-      const response = await fetch(`/api/admin/users/cars/${carId}/maintenances`);
+      const response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/users/cars/${carId}/maintenances`);
       const data = await response.json();
       setMaintenances(data.history || []); // Extract the history array
     } catch (error) {

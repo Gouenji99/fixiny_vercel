@@ -64,7 +64,7 @@ const ZonesManagement = () => {
 
   const handleDeleteZone = async (zoneId: string) => {
     try {
-      const response = await fetch(`/api/chef-park/zones/delete/${zoneId}`, {
+      const response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/zones/delete/${zoneId}`, {
         method: 'DELETE',
         credentials: 'include'
       });

@@ -44,7 +44,7 @@ export default function CarsList () {
     const handleDelete = async (carId: string) => {
         if (window.confirm('Are you sure you want to delete this car?')) {
             try {
-                await fetch(`/api/cars/${carId}`, { method: 'DELETE' });
+                await fetch(`https://fixiny-render-xbc3.onrender.com/api/cars/${carId}`, { method: 'DELETE' });
                 toast.success('Car deleted successfully');
                 fetchCars(); // Refresh the list
             } catch (error) {

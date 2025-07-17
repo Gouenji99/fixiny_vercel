@@ -44,7 +44,7 @@ const MaintenanceManagement = () => {
     if (!carId) return;
     setLoading(true);
     try {
-      const res = await fetch(`/api/chef-park/my-cars/${carId}`, { credentials: 'include' });
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/${carId}`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch car details');
       const data = await res.json();
       setCar(data);

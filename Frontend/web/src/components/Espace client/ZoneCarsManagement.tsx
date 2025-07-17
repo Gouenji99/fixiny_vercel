@@ -38,7 +38,7 @@ const ZoneCarManagement = () => {
         setLoading(true);
         setError('');
 
-        const response = zoneId ? await fetch(`/api/chef-park/my-cars/zone/${zoneId}`, {
+        const response = zoneId ? await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/zone/${zoneId}`, {
           method: 'GET',
           headers: {'Content-Type': 'application/json',},
           credentials: 'include'
@@ -126,7 +126,7 @@ const ZoneCarManagement = () => {
     setIsDeleting(true);
     setError('');
     try {
-      const res = await fetch(`/api/chef-park/my-cars/delete/${carId}`, {
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/delete/${carId}`, {
         method: 'DELETE',
         credentials: 'include'
       });
@@ -146,7 +146,7 @@ const ZoneCarManagement = () => {
 
   const handleTransferCar = async (carId: string, zoneId: string) => {
     try {
-      const res = await fetch(`/api/chef-park/my-cars/transfer/${carId}`, {
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/transfer/${carId}`, {
         method: 'PATCH',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
@@ -176,7 +176,7 @@ const ZoneCarManagement = () => {
 
     setIsUpdating(true);
     try {
-      const res = await fetch(`/api/chef-park/my-cars/update/${showEditModal.car.id}`, {
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/update/${showEditModal.car.id}`, {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',

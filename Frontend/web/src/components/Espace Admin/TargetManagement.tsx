@@ -34,7 +34,7 @@ const TargetManagement = () => {
     const handleUpdateBudget = async () => {
       setError('');
       try {
-        const res = await fetch(`/api/admin/targets/update-target/${editingTarget?.id}`, {
+        const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/admin/targets/update-target/${editingTarget?.id}`, {
           method: 'PUT',
           headers: { 'Content-Type': 'application/json' },
           credentials: 'include',

@@ -71,7 +71,7 @@ export default function ListCars() {
    setIsDeleting(true);
     
     try {
-      await fetch(`/api/particulier/my-cars/delete-car/${id}`, {
+      await fetch(`https://fixiny-render-xbc3.onrender.com/api/particulier/my-cars/delete-car/${id}`, {
         method: 'DELETE',
       });
       toast.success('Car deleted successfully');

@@ -54,7 +54,7 @@ const CarDetail = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`/api/chef-park/my-cars/${carId}`, { 
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-cars/${carId}`, { 
         credentials: 'include',
         headers: {'Content-Type': 'application/json'}
       });
@@ -157,7 +157,7 @@ const CarDetail = () => {
     
       if (editingMaintenanceId) {
         // This is a completion of an existing maintenance
-        response = await fetch(`/api/chef-park/my-maintenances/upcoming/complete/${editingMaintenanceId}`, {
+        response = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-maintenances/upcoming/complete/${editingMaintenanceId}`, {
           method: 'PUT',
           credentials: 'include',
           body: formData

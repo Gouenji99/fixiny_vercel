@@ -62,7 +62,7 @@ export default function ListMaintenances() {
     setIsDeleting(true);
     
     try {
-      await fetch(`/api/particulier/my-maintenances/delete/${id}`, {
+      await fetch(`https://fixiny-render-xbc3.onrender.com/api/particulier/my-maintenances/delete/${id}`, {
         method: 'DELETE',
       });
       toast.success('Maintenance record deleted successfully');

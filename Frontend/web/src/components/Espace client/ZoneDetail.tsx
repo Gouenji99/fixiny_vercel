@@ -18,7 +18,7 @@ const ZoneDetail = () => {
     setLoading(true);
     setError('');
     try {
-      const res = await fetch(`/api/chef-park/my-zones/${zoneId}`, { credentials: 'include' });
+      const res = await fetch(`https://fixiny-render-xbc3.onrender.com/api/chef-park/my-zones/${zoneId}`, { credentials: 'include' });
       if (!res.ok) throw new Error('Failed to fetch zone details');
       const data = await res.json();
       setZoneData(data);

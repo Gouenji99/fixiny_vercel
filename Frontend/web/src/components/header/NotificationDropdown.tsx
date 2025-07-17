@@ -38,7 +38,7 @@ export default function NotificationDropdown() {
 
   const markAsRead = async (id: string) => {
     try {
-      await fetch(`/api/user/notifications/${id}/read`, {
+      await fetch(`https://fixiny-render-xbc3.onrender.com/api/user/notifications/${id}/read`, {
         method: 'PATCH',
         credentials: 'include'
       });
