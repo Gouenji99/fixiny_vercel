@@ -41,6 +41,23 @@ const PrivateRoute = ({
           return;
         }
 
+        if (!requiredRole) {
+          switch (user.role) {
+            case 'ADMIN':
+              navigate('/', { replace: true });
+              break;
+            case 'CHEF_PARK':
+              navigate('/chef-park', { replace: true });
+              break;
+            case 'PARTICULIER':
+              navigate('/particulier', { replace: true });
+              break;
+            default:
+              navigate('/signin', { replace: true });
+          }
+          return;
+        }
+
         if (requiredRole && user.role !== requiredRole) {
           navigate('/error-404', { replace: true });
           return;
