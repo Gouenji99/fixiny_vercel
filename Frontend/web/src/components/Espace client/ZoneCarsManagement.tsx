@@ -297,7 +297,7 @@ const ZoneCarManagement = () => {
               <input
                 type="text"
                 value={newCar.make}
-                onChange={(e) => setNewCar({...newCar, make: e.target.value})}
+                onChange={(e) => setNewCar({...newCar, make: e.target.value.toUpperCase()})}
                 className="w-full p-2 border rounded"
                 required
               />
@@ -307,7 +307,7 @@ const ZoneCarManagement = () => {
               <input
                 type="text"
                 value={newCar.model}
-                onChange={(e) => setNewCar({...newCar, model: e.target.value})}
+                onChange={(e) => setNewCar({...newCar, model: e.target.value.toUpperCase()})}
                 className="w-full p-2 border rounded"
                 required
               />
